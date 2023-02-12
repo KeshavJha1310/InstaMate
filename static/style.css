@@ -1,0 +1,108 @@
+*{
+    margin: 0px;
+   padding: 0px; 
+
+}
+body{ 
+    min-height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url('images/WhatsApp Image 2023-01-29 at 3.06.04 AM.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+   
+}
+
+ .container{
+    height: 459px;
+    width: 966px;
+    margin: 130px 156px 0px 170px;
+    border-radius: 50px;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)); */
+   
+    background-color: transparent;
+    border: 1px double;
+    border-color: rgba(248, 0, 124, 0.479);
+    box-shadow: 0 5px 30px rgba(238, 8, 219, 0.5);
+
+    display: flex;
+animation: blink 2s linear infinite;
+   color: rgba(248, 0, 124, 0.479);
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    70%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.container{
+    animation: blink 1.5s linear 0s 1 normal both;
+}
+
+.icon{
+    height: 40vh;
+    width: 145vh;
+    margin: 90px 70px 70px 70px;
+    /* background-color: black; */
+
+   
+} 
+.icon img{
+    margin-top: -4vh;
+    margin-left: 19vh;
+    text-align: center;
+    
+}
+@keyframes blinkicon {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    70%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.icon {
+    animation: blinkicon 2s ease-in 1s 1 normal both;
+}
+.btn{
+
+      margin-top: 6vh;
+     
+      margin-left: 10vh;
+      padding-inline: 10px;
+      height: 30px;
+      width: 80px;
+      background-color: transparent;
+      color: blueviolet;
+      border-radius: 30%;
+      border: 1px double;
+      border-color: rgba(248, 0, 124, 0.479);
+}
+.btn a {
+    text-decoration: none;
+}
+.btn:hover {
+/* background-color: rgb(240, 128, 206 , 0.5); */
+box-shadow: 0 5px 30px rgba(238, 153, 231, 0.5);
+}
