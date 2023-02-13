@@ -8,7 +8,6 @@ import json
 import queue
 import threading
 
-
 app = Flask(__name__ , template_folder="templates")
 
 q = queue.Queue()
@@ -21,8 +20,6 @@ def worker():
         t = threading.Thread(target=worker)
         t.daemon = True
         t.start()
-
-
 
 app.secret_key = os.urandom(24)
 app.config['WTF_CSRF_SECRET_KEY'] = 'secret-key'
@@ -48,15 +45,16 @@ def login():
             bot = Bot()
             is_login = False 
 
-            is_login = bot.login(username=Username1 , password=Password1)
+            is_login = bot.login(username=Username1 , password=Password1, is_threaded=True)
             
-            try:
-                response_json = json.loads(is_login)
-            except json.JSONDecodeError as e:
-                 return jsonify({"error": "Failed to decode the response from the server. Please try again later."})
-            q.put(login)   
-            return jsonify(response_json) 
-        
+            # try:
+            #     response_json = json.loads(is_login)
+            # except json.JSONDecodeError as e:
+            #      return jsonify({"error": "Failed to decode the response from the server. Please try again later."})
+            # q.put(login)   
+            # return jsonify(response_json) 
+
+            return redirect("http://127.0.0.1:5000/operations")
             
                
         #session.pop('user',None)
@@ -104,8 +102,9 @@ def operations():
 
 
 if __name__ == "__main__": 
-   app.run(debug = True , port=5000, use_reloader =False)
+    app.run(debug = True , port=5000, use_reloader =False)
    
+
 cookie_del = glob.glob("config/*cookie.json")
 os.remove(cookie_del[0])
 
