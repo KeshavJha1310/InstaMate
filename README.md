@@ -27,6 +27,8 @@ Get ready to embark on an InstaMate adventure! Click "Let's Go" to begin.
 
 ### Step 2: Login and Connect 📲
 ![Login](https://github.com/KeshavJha1310/InstaMate/assets/124581153/81d3bac2-e7a1-47ea-9987-0b42a2a05e9c)
+![step-3](https://github.com/KeshavJha1310/InstaMate/assets/124581153/78633845-ae4b-4a6a-9e57-e45e1f3ce4a6)
+
 Securely log in with your Instagram account. Patience is key as the magic happens.
 
 ### Step 3: Operation Central 🛠️
