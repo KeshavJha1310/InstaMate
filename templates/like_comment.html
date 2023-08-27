@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like & Comment | insta_mate</title>
+    <link rel="stylesheet" href="\static\login_style.css">
+    <link rel="shortcut icon" href="static\images\download\favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/like_comment" method="post">
+            {csrf_token}}
+            <input type="hidden" name="csrf_token" value="{{ csrf_token()}}"/>
+            <div class="message">
+               Like & Comment<hr>
+             </div>
+             <div class="input-box">
+
+                <input type="text" name="User4" placeholder=" Instagram Username" required >
+            </div>
+            <div class="input-box">
+
+                <input type="number" name="number" placeholder="Non-negative" required >
+                <small id="error" style="color: red; ">Enter the number of Post you want to like.</small>
+            </div>
+            
+            
+            <div class="input-box">
+
+                <textarea name="message" placeholder="Enter your Comment" required></textarea>
+            </div>
+            <button class="btn" type="submit">Like</button>
+        </form>
+    </div>
+</body>
+<!-- <script>
+    function checkInput(input) {
+      const error = document.getElementById('error');
+      if (input.value < 1 || input.value > 4) {
+        error.style.display = 'block';
+      } else {
+        error.style.display = 'none';
+      }
+    }
+    </script> -->
+</html>

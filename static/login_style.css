@@ -2,7 +2,7 @@
 
 :root{
     --neon-color:#f1a5e1;
-    --white-color:#fff;
+    --white-color:rgb(190, 36, 36);
     --main-bacco:#051527;
     --light-bacco:#e516ecd3;
     --username-name:"Your Instagram Username";
@@ -19,7 +19,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: white;
+    background: black;
 }
  .instagram{
     color: rgb(180, 21, 132);
@@ -29,6 +29,39 @@ body{
    font-family:Tangerine;
    transition: 0.5s;    
 
+}
+.follow{
+    color: rgb(180, 21, 132);
+    font-size: 90px;
+    justify-content: top;
+    align-items: top;
+    font-family: "Poppins" , sans-serif;
+       transition: 0.5s;  
+}
+.wrapper:hover .follow{
+   color: var(--white-color);
+}
+.unfollow{
+    color: rgb(180, 21, 132);
+    font-size: 90px;
+    justify-content: top;
+    align-items: top;
+    font-family: "Poppins" , sans-serif;
+       transition: 0.5s;
+}
+.wrapper:hover .unfollow{
+   color: var(--white-color);
+}
+.message{
+    color: rgb(180, 21, 132);
+    font-size: 50px;
+    justify-content: top;
+    align-items: top;
+    font-family: "Poppins" , sans-serif;
+       transition: 0.5s;
+}
+.wrapper:hover .message{
+   color: var(--white-color);
 }
 .wrapper:hover .instagram{
    color: var(--white-color);
@@ -58,6 +91,9 @@ h2{
     color: var(--white-color);
     transition: 0.5s;    
 }
+hr{
+    color:white;
+}
 .wrapper:hover h2{
     color: #b700ff;
 }
@@ -69,6 +105,18 @@ margin: 30px 0;
 }
 
 .input-box input{
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    background: transparent;
+    border: 2px solid var(--light-bacco);
+    outline: none;
+    font-size: 1em;
+    color: var(--white-color);
+    padding: 0 10px 0 35px;
+    transition: 0.5s;
+}
+.input-box textarea{
     width: 100%;
     height: 50px;
     border-radius: 7px;

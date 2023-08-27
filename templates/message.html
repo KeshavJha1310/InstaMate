@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message | insta_mate</title>
+    <link rel="stylesheet" href="\static\login_style.css">
+    <link rel="shortcut icon" href="static\images\download\favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/message" method="post">
+            {csrf_token}}
+            <input type="hidden" name="csrf_token" value="{{ csrf_token()}}"/>
+            <div class="message">
+               Message<hr>
+             </div>
+            <div class="input-box">
+
+                <input type="number" name="number" placeholder="Number of users you want to follow" required oninput="checkInput(this)">
+                <small id="error" style="color: red; display: none;">Please enter a number from 1 to 4.</small>
+            </div>
+            <div class="input-box">
+
+                <input type="text" name="User1" placeholder=" Instagram Username" >
+            </div>
+            <div class="input-box">
+
+                <input type="text" name="User2" placeholder=" Instagram Username" >
+            </div>
+            <div class="input-box">
+
+                <input type="text" name="User3" placeholder=" Instagram Username" >
+            </div>
+            <div class="input-box">
+
+                <input type="text" name="User4" placeholder=" Instagram Username" >
+            </div>
+            <div class="input-box">
+
+                <textarea name="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+<script>
+    function checkInput(input) {
+      const error = document.getElementById('error');
+      if (input.value < 1 || input.value > 4) {
+        error.style.display = 'block';
+      } else {
+        error.style.display = 'none';
+      }
+    }
+    </script>
+</html>

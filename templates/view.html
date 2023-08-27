@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Followers and Following lists | insta_mate</title>
+    <link rel="stylesheet" href="\static\login_style.css">
+    <link rel="shortcut icon" href="static\images\download\favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/view" method="post">
+            {csrf_token}}
+            <input type="hidden" name="csrf_token" value="{{ csrf_token()}}"/>
+            <div class="unfollow">
+                Lists<hr>
+             </div>
+         
+            <div class="input-box">
+                <span  style="color: red; display: flex ;justify-content: center; margin-bottom: 20px;">
+                    List out yours as well as others <br>
+                    Followers and Following lists
+                </span>
+                <input type="text" name="id" placeholder="User I'd" >
+
+            </div>
+          
+            <button class="btn" type="submit">List_Out</button>
+        </form>
+    </div>
+</body>
+<script>
+    function checkInput(input) {
+      const error = document.getElementById('error');
+      if (input.value < 1 || input.value > 4) {
+        error.style.display = 'block';
+      } else {
+        error.style.display = 'none';
+      }
+    }
+    </script>
+</html>

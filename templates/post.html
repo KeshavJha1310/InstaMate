@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Post | insta_mate</title>
+    <link rel="stylesheet" href="\static\login_style.css">
+    <link rel="shortcut icon" href="static\images\download\favicon.png" type="image/x-icon" />
+
+<body>
+    <div class="wrapper">
+        <form action="/post" method="post" enctype="multipart/form-data">
+            {csrf_token}}
+            <input type="hidden" name="csrf_token" value="{{ csrf_token()}}"/>
+            <div class="input-box">
+                <img id="img" src="static\images\upload.webp" alt=""  style="display: flex;justify-content: center;align-items:center;max-width: 350px;">
+                
+             </div>
+    <div class="input-box">
+        <input type="file" name="file" id="file"value="choose the image" >
+    </div>
+            <div class="input-box">
+                <input type="text" name="caption" id="caption" placeholder="Add Caption !!!! " >
+
+            </div>
+          
+            <button class="btn" type="submit">Post</button>
+        </form>
+    </div>
+</body>
+<script>
+    let img = document.getElementById('img');
+    let file = document.getElementById('file');
+
+    file.onchange = (e) => {
+        if (file.files[0])
+          img.src = URL.createObjectURL(file.files[0]);
+    };
+
+</script>
+</html>
